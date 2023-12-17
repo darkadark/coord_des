@@ -10,13 +10,12 @@ std::vector<double> DetermineSearch::Optimize(const std::vector<double>& x_0) {
     int n = 0;
     while (!stop_crit.NeedStop(x, f(x), n)) {
         std::vector<double> x_prev = x;
-        //итерация (цикл по всем координатам)
         for (int i = 0; i < x.size(); ++i) {
             auto f1 = [&x, i, this](double x_i)->double {
                 x[i] = x_i;
                 return f(x);
             };
-            x[i] = onedim_opt.Optimize(r[i], l[i], f1);
+            x[i] = onedim_opt->Optimize(r[i], l[i], f1);
         }
         ++n;
 

@@ -2,9 +2,8 @@
 #include <random>
 #include "StopCriterion.h"
 #include <functional>
+#include "Functions.h"
 
-//extern std::random_device rd;
-//extern std::mt19937 gen(rd());
 
 class OnedimOpt {
 
@@ -15,12 +14,12 @@ public:
 
 class MultdimOpt {
 protected:
-    std::function<double(const std::vector<double>&)> f;
+    const func& f;
     std::vector<double> r;
     std::vector<double> l;
     StopCriterion& stop_crit;
 public:
-    MultdimOpt(std::function<double(const std::vector<double>&)> f_,
+    MultdimOpt(const func& f_,
         const std::vector<double>& r_,
         const std::vector<double>& l_,
         StopCriterion& stop_crit_) :
@@ -30,17 +29,17 @@ public:
 };
 
 class DetermineSearch : public MultdimOpt {
-    OnedimOpt& onedim_opt;
+    OnedimOpt* onedim_opt;
 public:
-    DetermineSearch(std::function<double(const std::vector<double>&)> f_,
+    DetermineSearch(const func& f_,
         const std::vector<double>& r_,
         const std::vector<double>& l_,
         StopCriterion& stop_crit_,
-        OnedimOpt& onedim_opt_) :
+        OnedimOpt* onedim_opt_) :
         MultdimOpt(f_, r_, l_, stop_crit_), onedim_opt(onedim_opt_)
     {}
+    ~DetermineSearch() { delete onedim_opt; }
     std::vector<double> Optimize(const std::vector<double>& x) override;
-
 };
 
 class TernarySearch : public OnedimOpt {
@@ -55,7 +54,7 @@ class RandomSearch : public MultdimOpt {
     std::vector<double> GenY();
     std::vector<std::uniform_real_distribution<double>> dist;
 public:
-    RandomSearch(std::function<double(const std::vector<double>&)> f_,
+    RandomSearch(const func& f_,
         const std::vector<double>& r_,
         const std::vector<double>& l_,
         StopCriterion& stop_crit_) :
@@ -69,21 +68,4 @@ public:
     }
     std::vector<double> Optimize(const std::vector<double>& x) override;
 };
-
-/*
-class StopCriterionByNEps : public StopCriterion {
-    double i_min;
-    double eps;
-public:
-    StopCriterionByNEps(double eps_) : eps(eps_) {}
-    bool NeedStop(const std::vector<double>& x, double y, int n) override;
-};
-
-bool StopCriterionByN::NeedStop(const std::vector<double>& x, double y, int n) {
-    if (n >= n_max)
-        return true;
-
-    return false;
-}
-*/
 

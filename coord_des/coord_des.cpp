@@ -1,7 +1,4 @@
-﻿// coord_des.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
-#include <iostream>
+﻿#include <iostream>
 #include <vector>
 #include <algorithm>
 #include <functional>
@@ -20,25 +17,24 @@ int main()
     std::cout << "2) 5x^2 + 6xy + 5y^2"<< std::endl;
     std::cout << "3) x^2 + y^2 + z^2 + 2x + 2y + 2z" << std::endl;
     std::cout << "Select function: ";
-    int func;
-    std::cin >> func;
-    std::function<double(const std::vector<double>&)> f;
-    double dim;
-    switch (func) {
-    case 1: 
-        dim = 2;
-        f = f1;
-        break;
-    case 2:
-        dim = 2;
-        f = f2;
-        break;
-    case 3: 
-        dim = 3;
-        f = f3;
-        break;
-
+    std::unique_ptr<func> f = nullptr;
+    while (!f)
+    {
+        int func_num;
+        std::cin >> func_num;
+        switch (func_num) {
+        case 1:
+            f = std::make_unique<f1>(); break;
+        case 2:
+            f = std::make_unique<f2>(); break;
+        case 3:
+            f = std::make_unique<f3>(); break;
+        default:
+            std::cout << "Error number" << std::endl;
+        }
     }
+
+    const int dim = f->get_dim();
     std::cout << std::endl;
     std::vector<double> x_0(dim);
     std::cout << "Enter starting point" << std::endl;
@@ -48,7 +44,7 @@ int main()
         std::cin >> xi;
         x_0[i] = xi;
     }
-    //std::vector<double> x_0{ 0.5, 0.5 };
+
     std::cout << std::endl;
     std::vector<double> l(dim);
     std::cout << "Set left border" << std::endl;
@@ -115,29 +111,27 @@ int main()
     }
     std::cout << std::endl;
     std::vector<double> res;
+    MultdimOpt* multdim_opt = nullptr;
     switch (method)
     {
     case 1: {
-        TernarySearch ternary_search(eps);
-        //StopCriterionByYEps stop_crit(eps);
-        DetermineSearch determine_opt(f, r, l, *stop_crit, ternary_search);
-        res = determine_opt.Optimize(x_0);
+        multdim_opt = new DetermineSearch(*f, r, l, *stop_crit, new TernarySearch(eps));
         break;}
     case 2: {
-        //StopCriterionByN stop_crit_n(100);
-        RandomSearch random_opt(f, r, l, *stop_crit);
-        res = random_opt.Optimize(x_0);
+        multdim_opt = new RandomSearch(*f, r, l, *stop_crit);
         break; }
     default:
         break;
     }
+
+    res = multdim_opt->Optimize(x_0);
 
     std::cout << "\nResult:" << std::endl; 
     for (int i = 0; i < res.size(); ++i) {
         std::cout << res[i] << " ";
     }
     
+    delete multdim_opt;
     delete stop_crit;
-
     return 0;
 }
