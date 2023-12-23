@@ -9,7 +9,7 @@
 
 int main()
 {
-    double eps = 1e-06;
+    double eps = -1;
     
     std::cout << "COORDINATE DESCENT" << std::endl;
     std::cout << "\nFunctions:" << std::endl;
@@ -24,11 +24,14 @@ int main()
         std::cin >> func_num;
         switch (func_num) {
         case 1:
-            f = std::make_unique<f1>(); break;
+            f = std::make_unique<f1>(); 
+            break;
         case 2:
-            f = std::make_unique<f2>(); break;
+            f = std::make_unique<f2>(); 
+            break;
         case 3:
-            f = std::make_unique<f3>(); break;
+            f = std::make_unique<f3>(); 
+            break;
         default:
             std::cout << "Error number" << std::endl;
         }
@@ -62,6 +65,8 @@ int main()
         r[i] = xi;
     }
 
+    double p = -1;
+    double delta = -1;
     std::cout << "\nOptimizations:" << std::endl;
     std::cout << "1) Deterministic Search" << std::endl;
     std::cout << "2) Random Search" << std::endl;
@@ -76,6 +81,16 @@ int main()
             break;}
         case 2: {
             method = 2;
+            while (p < 0 || p > 1)
+            {
+                std::cout << "\nSet p from 0 to 1:";
+                std::cin >> p;
+            }
+            while (delta < 0)
+            {
+                std::cout << "\nSet delta > 0:";
+                std::cin >> delta;
+            }
             break; }
         default:
             std::cout << "Error number" << std::endl;
@@ -94,9 +109,19 @@ int main()
         std::cin >> stop;
         switch (stop) {
         case 1:
+            while (eps < 0)
+            {
+                std::cout << "\nSet eps > 0:";
+                std::cin >> eps;
+            }
             stop_crit = new StopCriterionByYEps(eps);
             break;
         case 2:
+            while (eps < 0)
+            {
+                std::cout << "\nSet eps > 0:";
+                std::cin >> eps;
+            }
             stop_crit = new StopCriterionByXEps(eps);
             break;
         case 3:{
@@ -118,7 +143,7 @@ int main()
         multdim_opt = new DetermineSearch(*f, r, l, *stop_crit, new TernarySearch(eps));
         break;}
     case 2: {
-        multdim_opt = new RandomSearch(*f, r, l, *stop_crit);
+        multdim_opt = new RandomSearch(*f, r, l, p, delta, *stop_crit);
         break; }
     default:
         break;

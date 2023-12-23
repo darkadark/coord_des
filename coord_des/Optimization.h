@@ -51,14 +51,18 @@ public:
 
 
 class RandomSearch : public MultdimOpt {
-    std::vector<double> GenY();
+    std::vector<double> GenY(const std::vector<double>& x);
     std::vector<std::uniform_real_distribution<double>> dist;
+    double p;
+    double delta;
 public:
     RandomSearch(const func& f_,
         const std::vector<double>& r_,
         const std::vector<double>& l_,
+        double p_,
+        double delta_,
         StopCriterion& stop_crit_) :
-        MultdimOpt(f_, r_, l_, stop_crit_)
+        MultdimOpt(f_, r_, l_, stop_crit_), p(p_), delta(delta_)
     {
         dist.reserve(r.size());
         for (int i = 0; i < r.size(); ++i) {

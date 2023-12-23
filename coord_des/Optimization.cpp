@@ -23,10 +23,21 @@ std::vector<double> DetermineSearch::Optimize(const std::vector<double>& x_0) {
     return x;
 }
 
-std::vector<double> RandomSearch::GenY() {
+std::vector<double> RandomSearch::GenY(const std::vector<double>& x) {
     std::vector<double> y(dist.size());
-    for (int i = 0; i < dist.size(); ++i) {
-        y[i] = dist[i](gen);
+    std::uniform_real_distribution<double> d(0, 1);
+    double alpha = d(gen);
+    if (alpha > p){
+        for (int i = 0; i < dist.size(); ++i) {
+            y[i] = dist[i](gen);
+        }
+    }
+    else {
+        for (int i = 0; i < dist.size(); ++i) {
+            std::uniform_real_distribution<double> b(std::max(x[i] - delta, dist[i].a()), 
+                std::min(x[i] + delta, dist[i].b()));
+            y[i] = b(gen);
+        }
     }
     return y;
 }
@@ -35,7 +46,7 @@ std::vector<double> RandomSearch::Optimize(const std::vector<double>& x_0) {
     std::vector<double> x = x_0;
     int n = 0;
     while (!stop_crit.NeedStop(x, f(x), n)) {
-        std::vector<double> y = GenY();
+        std::vector<double> y = GenY(x);
         if (f(x) > f(y))
             x.swap(y);
         ++n;
