@@ -1,0 +1,5 @@
+<map id="StopCriterionByYEps" name="StopCriterionByYEps">
+<area shape="rect" id="Node000001" title="Класс критерия остановки |f(x) &#45; f(y)| &lt; eps." alt="" coords="5,80,150,107"/>
+<area shape="rect" id="Node000002" href="$class_stop_criterion.html" title="Класс критериев остановки" alt="" coords="29,5,126,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,47,80,80,75,80,75,47"/>
+</map>

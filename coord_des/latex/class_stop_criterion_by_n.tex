@@ -1,0 +1,95 @@
+\doxysection{Stop\+Criterion\+ByN Class Reference}
+\hypertarget{class_stop_criterion_by_n}{}\label{class_stop_criterion_by_n}\index{StopCriterionByN@{StopCriterionByN}}
+
+
+Класс критерия остановки n iterations.  
+
+
+
+
+{\ttfamily \#include $<$Stop\+Criterion.\+h$>$}
+
+
+
+Inheritance diagram for Stop\+Criterion\+ByN\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_stop_criterion_by_n__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Stop\+Criterion\+ByN\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_stop_criterion_by_n__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stop_criterion_by_n_afe347f9bef619ccb49365e4653cc9029}{Stop\+Criterion\+ByN}} (double n\+\_\+)
+\begin{DoxyCompactList}\small\item\em Конструктор критерия остановки \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stop_criterion_by_n_a1d5f167b886f3c7111e35d0e4ff7eca4}{Need\+Stop}} (const std\+::vector$<$ double $>$ \&x, double y, int n) override
+\begin{DoxyCompactList}\small\item\em Функция необходимости остановки \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_stop_criterion_a56f99830632b664d26d1f2d4c9666967}{Need\+Stop}} (const std\+::vector$<$ double $>$ \&x, double y, int n)=0
+\begin{DoxyCompactList}\small\item\em Функция необходимости остановки \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс критерия остановки n iterations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_stop_criterion_by_n_afe347f9bef619ccb49365e4653cc9029}\label{class_stop_criterion_by_n_afe347f9bef619ccb49365e4653cc9029} 
+\index{StopCriterionByN@{StopCriterionByN}!StopCriterionByN@{StopCriterionByN}}
+\index{StopCriterionByN@{StopCriterionByN}!StopCriterionByN@{StopCriterionByN}}
+\doxysubsubsection{\texorpdfstring{StopCriterionByN()}{StopCriterionByN()}}
+{\footnotesize\ttfamily Stop\+Criterion\+By\+N\+::\+Stop\+Criterion\+ByN (\begin{DoxyParamCaption}\item[{double}]{n\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор критерия остановки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+\_\+} & количество итераций \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stop_criterion_by_n_a1d5f167b886f3c7111e35d0e4ff7eca4}\label{class_stop_criterion_by_n_a1d5f167b886f3c7111e35d0e4ff7eca4} 
+\index{StopCriterionByN@{StopCriterionByN}!NeedStop@{NeedStop}}
+\index{NeedStop@{NeedStop}!StopCriterionByN@{StopCriterionByN}}
+\doxysubsubsection{\texorpdfstring{NeedStop()}{NeedStop()}}
+{\footnotesize\ttfamily bool Stop\+Criterion\+By\+N\+::\+Need\+Stop (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{x,  }\item[{double}]{y,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Функция необходимости остановки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & координаты точки \\
+\hline
+{\em y} & координаты точки \\
+\hline
+{\em n} & количество итераций \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_stop_criterion_a56f99830632b664d26d1f2d4c9666967}{Stop\+Criterion}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Stop\+Criterion.\+h\item 
+Stop\+Criterion.\+cpp\end{DoxyCompactItemize}

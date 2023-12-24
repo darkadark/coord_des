@@ -1,0 +1,114 @@
+\doxysection{Determine\+Search Class Reference}
+\hypertarget{class_determine_search}{}\label{class_determine_search}\index{DetermineSearch@{DetermineSearch}}
+
+
+Класс метода покоординатного спуска  
+
+
+
+
+{\ttfamily \#include $<$Optimization.\+h$>$}
+
+
+
+Inheritance diagram for Determine\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{class_determine_search__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Determine\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_determine_search__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_determine_search_a64922015bb72df6420c56f38948c1fb1}{Determine\+Search}} (const \mbox{\hyperlink{classfunc}{func}} \&f\+\_\+, const std\+::vector$<$ double $>$ \&r\+\_\+, const std\+::vector$<$ double $>$ \&l\+\_\+, \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&stop\+\_\+crit\+\_\+, \mbox{\hyperlink{class_onedim_opt}{Onedim\+Opt}} \texorpdfstring{$\ast$}{*}onedim\+\_\+opt\+\_\+)
+\begin{DoxyCompactList}\small\item\em Конструктор класса метода покоординатного спуска \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_determine_search_aef1783f347e0d6ac699a164bf7184e80}{Optimize}} (const std\+::vector$<$ double $>$ \&x) override
+\begin{DoxyCompactList}\small\item\em Функция многомерной оптимизации методом покоординатного спуска \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_multdim_opt}{Multdim\+Opt}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_multdim_opt_afe3ec62a3a109a3436180c1aa09a8218}{Multdim\+Opt}} (const \mbox{\hyperlink{classfunc}{func}} \&f\+\_\+, const std\+::vector$<$ double $>$ \&r\+\_\+, const std\+::vector$<$ double $>$ \&l\+\_\+, \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&stop\+\_\+crit\+\_\+)
+\begin{DoxyCompactList}\small\item\em Конструктор класса многомерной оптимизации \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ double $>$ \mbox{\hyperlink{class_multdim_opt_a6fff0c18101fb90443b7f599d4f28d9b}{Optimize}} (const std\+::vector$<$ double $>$ \&x)=0
+\begin{DoxyCompactList}\small\item\em Функция многомерной оптимизации \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_multdim_opt}{Multdim\+Opt}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classfunc}{func}} \& \mbox{\hyperlink{class_multdim_opt_a69f4a50ed48459aa2bac0304bab28d5a}{f}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_multdim_opt_a6fa83ebd5dff988d68878de217af86ac}{r}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_multdim_opt_a0790e4a45ecf0bf5479158001baa9320}{l}}
+\item 
+\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \& \mbox{\hyperlink{class_multdim_opt_a00f2d98c73295540f4c313d2ee598085}{stop\+\_\+crit}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс метода покоординатного спуска 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_determine_search_a64922015bb72df6420c56f38948c1fb1}\label{class_determine_search_a64922015bb72df6420c56f38948c1fb1} 
+\index{DetermineSearch@{DetermineSearch}!DetermineSearch@{DetermineSearch}}
+\index{DetermineSearch@{DetermineSearch}!DetermineSearch@{DetermineSearch}}
+\doxysubsubsection{\texorpdfstring{DetermineSearch()}{DetermineSearch()}}
+{\footnotesize\ttfamily Determine\+Search\+::\+Determine\+Search (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfunc}{func}} \&}]{f\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{r\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{l\+\_\+,  }\item[{\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&}]{stop\+\_\+crit\+\_\+,  }\item[{\mbox{\hyperlink{class_onedim_opt}{Onedim\+Opt}} \texorpdfstring{$\ast$}{*}}]{onedim\+\_\+opt\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор класса метода покоординатного спуска 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f\+\_\+} & заданная функция \\
+\hline
+{\em r\+\_\+} & правая граница \\
+\hline
+{\em l\+\_\+} & левая граница \\
+\hline
+{\em stop\+\_\+crit\+\_\+} & критерий остановки \\
+\hline
+{\em onedim\+\_\+opt\+\_\+} & объект одномерной оптимизации \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_determine_search_aef1783f347e0d6ac699a164bf7184e80}\label{class_determine_search_aef1783f347e0d6ac699a164bf7184e80} 
+\index{DetermineSearch@{DetermineSearch}!Optimize@{Optimize}}
+\index{Optimize@{Optimize}!DetermineSearch@{DetermineSearch}}
+\doxysubsubsection{\texorpdfstring{Optimize()}{Optimize()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Determine\+Search\+::\+Optimize (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Функция многомерной оптимизации методом покоординатного спуска 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & координаты точки \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_multdim_opt_a6fff0c18101fb90443b7f599d4f28d9b}{Multdim\+Opt}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Optimization.\+h\item 
+Optimization.\+cpp\end{DoxyCompactItemize}

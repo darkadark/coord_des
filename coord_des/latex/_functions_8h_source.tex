@@ -1,0 +1,35 @@
+\doxysection{Functions.\+h}
+\hypertarget{_functions_8h_source}{}\label{_functions_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classfunc}{func}}\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classfunc_a3d196a7850075d0af069370e5f4427d3}{operator()}}(\textcolor{keyword}{const}\ std::vector<double>\&\ x)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classfunc_a93cd0b740ce9f6f1314cb92edefac369}{get\_dim}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classfunc}{\string~func}}()\ \{\}}
+\DoxyCodeLine{00020\ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classf1}{f1}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classfunc}{func}}\ \{}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classf1_a93edc314d9b261f9ae642a7bc566017f}{operator()}}(\textcolor{keyword}{const}\ std::vector<double>\&\ x)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classf1_aee3caffb8cb7a3a57e93c18d98609020}{get\_dim}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ 2;\ \}}
+\DoxyCodeLine{00036\ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classf2}{f2}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classfunc}{func}}\ \{}
+\DoxyCodeLine{00042\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classf2_a52c6e192ac21c73e2d2442a1e25b0f8d}{operator()}}(\textcolor{keyword}{const}\ std::vector<double>\&\ x)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classf2_ae8a73d67dabb6808bb4aa41e73d48e1b}{get\_dim}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ 2;\ \}}
+\DoxyCodeLine{00049\ \};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classf3}{f3}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classfunc}{func}}\ \{}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ dim;\ }
+\DoxyCodeLine{00056\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00057\ \ \ \ \ \mbox{\hyperlink{classf3}{f3}}(\textcolor{keywordtype}{int}\ \_dim\ =\ 3)\ :\ dim(\_dim)\ \{\}}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classf3_a6e88adfc49d09c121d826c38446a48c6}{operator()}}(\textcolor{keyword}{const}\ std::vector<double>\&\ x)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classf3_a6421f8f6f3de1fdaf6fe804776f7825d}{get\_dim}}()\textcolor{keyword}{\ const\ override\ }\{\ \textcolor{keywordflow}{return}\ dim;\ \}}
+\DoxyCodeLine{00067\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,83 @@
+\doxysection{Optimization.\+h}
+\hypertarget{_optimization_8h_source}{}\label{_optimization_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}StopCriterion.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}Functions.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_onedim_opt}{OnedimOpt}}\ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_onedim_opt}{\string~OnedimOpt}}()\ \{\}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_onedim_opt_a8bb320553d225ef486afbb81b6d0490d}{Optimize}}(\textcolor{keywordtype}{double}\ r,\ \textcolor{keywordtype}{double}\ l,\ std::function<\textcolor{keywordtype}{double}(\textcolor{keywordtype}{double})>\ f)\ =\ 0;}
+\DoxyCodeLine{00025\ \};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_multdim_opt}{MultdimOpt}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classfunc}{func}}\&\ \mbox{\hyperlink{class_multdim_opt_a69f4a50ed48459aa2bac0304bab28d5a}{f}};\ }
+\DoxyCodeLine{00034\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_multdim_opt_a6fa83ebd5dff988d68878de217af86ac}{r}};\ }
+\DoxyCodeLine{00035\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_multdim_opt_a0790e4a45ecf0bf5479158001baa9320}{l}};\ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}\&\ \mbox{\hyperlink{class_multdim_opt_a00f2d98c73295540f4c313d2ee598085}{stop\_crit}};\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_multdim_opt_afe3ec62a3a109a3436180c1aa09a8218}{MultdimOpt}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classfunc}{func}}\&\ f\_,}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ r\_,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ l\_,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}\&\ stop\_crit\_)\ :}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_multdim_opt_a69f4a50ed48459aa2bac0304bab28d5a}{f}}(f\_),\ \mbox{\hyperlink{class_multdim_opt_a6fa83ebd5dff988d68878de217af86ac}{r}}(r\_),\ \mbox{\hyperlink{class_multdim_opt_a0790e4a45ecf0bf5479158001baa9320}{l}}(l\_),\ \mbox{\hyperlink{class_multdim_opt_a00f2d98c73295540f4c313d2ee598085}{stop\_crit}}(stop\_crit\_)}
+\DoxyCodeLine{00050\ \ \ \ \ \{\}}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<double>\ \mbox{\hyperlink{class_multdim_opt_a6fff0c18101fb90443b7f599d4f28d9b}{Optimize}}(\textcolor{keyword}{const}\ std::vector<double>\&\ x)\ =\ 0;}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_determine_search}{DetermineSearch}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_multdim_opt}{MultdimOpt}}\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{class_onedim_opt}{OnedimOpt}}*\ onedim\_opt;\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{class_determine_search_a64922015bb72df6420c56f38948c1fb1}{DetermineSearch}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classfunc}{func}}\&\ f\_,}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ r\_,}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ l\_,}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}\&\ stop\_crit\_,}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_onedim_opt}{OnedimOpt}}*\ onedim\_opt\_)\ :}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_multdim_opt}{MultdimOpt}}(f\_,\ r\_,\ l\_,\ stop\_crit\_),\ onedim\_opt(onedim\_opt\_)}
+\DoxyCodeLine{00079\ \ \ \ \ \{\}}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{class_determine_search}{\string~DetermineSearch}}()\ \{\ \textcolor{keyword}{delete}\ onedim\_opt;\ \}}
+\DoxyCodeLine{00085\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_determine_search_aef1783f347e0d6ac699a164bf7184e80}{Optimize}}(\textcolor{keyword}{const}\ std::vector<double>\&\ x)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00086\ \};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00091\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ternary_search}{TernarySearch}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_onedim_opt}{OnedimOpt}}\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \textcolor{keywordtype}{double}\ eps;\ }
+\DoxyCodeLine{00093\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00098\ \ \ \ \ \mbox{\hyperlink{class_ternary_search_ad26c0052c0566451dda7f7bc107a64a0}{TernarySearch}}(\textcolor{keywordtype}{double}\ eps\_)\ :\ eps(eps\_)\ \{\}}
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_ternary_search_a19d0957ef13cc1f480905d8bf29d7d36}{Optimize}}(\textcolor{keywordtype}{double}\ r,\ \textcolor{keywordtype}{double}\ l,\ std::function<\textcolor{keywordtype}{double}(\textcolor{keywordtype}{double})>\ f)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00112\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_random_search}{RandomSearch}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_multdim_opt}{MultdimOpt}}\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ std::vector<double>\ GenY(\textcolor{keyword}{const}\ std::vector<double>\&\ x);\ }
+\DoxyCodeLine{00114\ \ \ \ \ std::vector<std::uniform\_real\_distribution<double>>\ dist;\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{double}\ p;\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{double}\ delta;\ }
+\DoxyCodeLine{00117\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{class_random_search_ad897949c37f0117b3c627485ddac9272}{RandomSearch}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classfunc}{func}}\&\ f\_,}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ r\_,}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ l\_,}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ p\_,}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ delta\_,}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_stop_criterion}{StopCriterion}}\&\ stop\_crit\_)\ :}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_multdim_opt}{MultdimOpt}}(f\_,\ r\_,\ l\_,\ stop\_crit\_),\ p(p\_),\ delta(delta\_)}
+\DoxyCodeLine{00134\ \ \ \ \ \{}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ dist.reserve(\mbox{\hyperlink{class_multdim_opt_a6fa83ebd5dff988d68878de217af86ac}{r}}.size());}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{class_multdim_opt_a6fa83ebd5dff988d68878de217af86ac}{r}}.size();\ ++i)\ \{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ dist.emplace\_back(\mbox{\hyperlink{class_multdim_opt_a0790e4a45ecf0bf5479158001baa9320}{l}}[i],\ \mbox{\hyperlink{class_multdim_opt_a6fa83ebd5dff988d68878de217af86ac}{r}}[i]);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \}}
+\DoxyCodeLine{00145\ \ \ \ \ std::vector<double>\ \mbox{\hyperlink{class_random_search_a37ad9ee83ab0168f759224428fb70180}{Optimize}}(\textcolor{keyword}{const}\ std::vector<double>\&\ x)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00146\ \};}
+\DoxyCodeLine{00147\ }
+
+\end{DoxyCode}

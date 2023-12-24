@@ -1,0 +1,95 @@
+\doxysection{Stop\+Criterion\+By\+XEps Class Reference}
+\hypertarget{class_stop_criterion_by_x_eps}{}\label{class_stop_criterion_by_x_eps}\index{StopCriterionByXEps@{StopCriterionByXEps}}
+
+
+Класс критерия остановки \texorpdfstring{$\vert$}{|}x -\/ y\texorpdfstring{$\vert$}{|} \texorpdfstring{$<$}{<} eps.  
+
+
+
+
+{\ttfamily \#include $<$Stop\+Criterion.\+h$>$}
+
+
+
+Inheritance diagram for Stop\+Criterion\+By\+XEps\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_stop_criterion_by_x_eps__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Stop\+Criterion\+By\+XEps\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{class_stop_criterion_by_x_eps__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stop_criterion_by_x_eps_a64be6a240a6d04edc9c4cdefb6ff0d76}{Stop\+Criterion\+By\+XEps}} (double eps\+\_\+)
+\begin{DoxyCompactList}\small\item\em Конструктор критерия остановки \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_stop_criterion_by_x_eps_afa43eafed1b538857f730e35d5a6f04d}{Need\+Stop}} (const std\+::vector$<$ double $>$ \&x, double y, int n) override
+\begin{DoxyCompactList}\small\item\em Функция необходимости остановки \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_stop_criterion_a56f99830632b664d26d1f2d4c9666967}{Need\+Stop}} (const std\+::vector$<$ double $>$ \&x, double y, int n)=0
+\begin{DoxyCompactList}\small\item\em Функция необходимости остановки \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс критерия остановки \texorpdfstring{$\vert$}{|}x -\/ y\texorpdfstring{$\vert$}{|} \texorpdfstring{$<$}{<} eps. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_stop_criterion_by_x_eps_a64be6a240a6d04edc9c4cdefb6ff0d76}\label{class_stop_criterion_by_x_eps_a64be6a240a6d04edc9c4cdefb6ff0d76} 
+\index{StopCriterionByXEps@{StopCriterionByXEps}!StopCriterionByXEps@{StopCriterionByXEps}}
+\index{StopCriterionByXEps@{StopCriterionByXEps}!StopCriterionByXEps@{StopCriterionByXEps}}
+\doxysubsubsection{\texorpdfstring{StopCriterionByXEps()}{StopCriterionByXEps()}}
+{\footnotesize\ttfamily Stop\+Criterion\+By\+XEps\+::\+Stop\+Criterion\+By\+XEps (\begin{DoxyParamCaption}\item[{double}]{eps\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор критерия остановки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eps\+\_\+} & Эпсилон \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stop_criterion_by_x_eps_afa43eafed1b538857f730e35d5a6f04d}\label{class_stop_criterion_by_x_eps_afa43eafed1b538857f730e35d5a6f04d} 
+\index{StopCriterionByXEps@{StopCriterionByXEps}!NeedStop@{NeedStop}}
+\index{NeedStop@{NeedStop}!StopCriterionByXEps@{StopCriterionByXEps}}
+\doxysubsubsection{\texorpdfstring{NeedStop()}{NeedStop()}}
+{\footnotesize\ttfamily bool Stop\+Criterion\+By\+XEps\+::\+Need\+Stop (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{x,  }\item[{double}]{y,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Функция необходимости остановки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & координаты точки \\
+\hline
+{\em y} & координаты точки \\
+\hline
+{\em n} & количество итераций \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_stop_criterion_a56f99830632b664d26d1f2d4c9666967}{Stop\+Criterion}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Stop\+Criterion.\+h\item 
+Stop\+Criterion.\+cpp\end{DoxyCompactItemize}

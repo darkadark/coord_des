@@ -1,0 +1,130 @@
+\doxysection{Multdim\+Opt Class Reference}
+\hypertarget{class_multdim_opt}{}\label{class_multdim_opt}\index{MultdimOpt@{MultdimOpt}}
+
+
+Класс многомерной оптимизации  
+
+
+
+
+{\ttfamily \#include $<$Optimization.\+h$>$}
+
+
+
+Inheritance diagram for Multdim\+Opt\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{class_multdim_opt__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Multdim\+Opt\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_multdim_opt__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_multdim_opt_afe3ec62a3a109a3436180c1aa09a8218}{Multdim\+Opt}} (const \mbox{\hyperlink{classfunc}{func}} \&f\+\_\+, const std\+::vector$<$ double $>$ \&r\+\_\+, const std\+::vector$<$ double $>$ \&l\+\_\+, \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&stop\+\_\+crit\+\_\+)
+\begin{DoxyCompactList}\small\item\em Конструктор класса многомерной оптимизации \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ double $>$ \mbox{\hyperlink{class_multdim_opt_a6fff0c18101fb90443b7f599d4f28d9b}{Optimize}} (const std\+::vector$<$ double $>$ \&x)=0
+\begin{DoxyCompactList}\small\item\em Функция многомерной оптимизации \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classfunc}{func}} \& \mbox{\hyperlink{class_multdim_opt_a69f4a50ed48459aa2bac0304bab28d5a}{f}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_multdim_opt_a6fa83ebd5dff988d68878de217af86ac}{r}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_multdim_opt_a0790e4a45ecf0bf5479158001baa9320}{l}}
+\item 
+\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \& \mbox{\hyperlink{class_multdim_opt_a00f2d98c73295540f4c313d2ee598085}{stop\+\_\+crit}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс многомерной оптимизации 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_multdim_opt_afe3ec62a3a109a3436180c1aa09a8218}\label{class_multdim_opt_afe3ec62a3a109a3436180c1aa09a8218} 
+\index{MultdimOpt@{MultdimOpt}!MultdimOpt@{MultdimOpt}}
+\index{MultdimOpt@{MultdimOpt}!MultdimOpt@{MultdimOpt}}
+\doxysubsubsection{\texorpdfstring{MultdimOpt()}{MultdimOpt()}}
+{\footnotesize\ttfamily Multdim\+Opt\+::\+Multdim\+Opt (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfunc}{func}} \&}]{f\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{r\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{l\+\_\+,  }\item[{\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&}]{stop\+\_\+crit\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор класса многомерной оптимизации 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f\+\_\+} & заданная функция \\
+\hline
+{\em r\+\_\+} & правая граница \\
+\hline
+{\em l\+\_\+} & левая граница \\
+\hline
+{\em stop\+\_\+crit\+\_\+} & критерий остановки \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_multdim_opt_a6fff0c18101fb90443b7f599d4f28d9b}\label{class_multdim_opt_a6fff0c18101fb90443b7f599d4f28d9b} 
+\index{MultdimOpt@{MultdimOpt}!Optimize@{Optimize}}
+\index{Optimize@{Optimize}!MultdimOpt@{MultdimOpt}}
+\doxysubsubsection{\texorpdfstring{Optimize()}{Optimize()}}
+{\footnotesize\ttfamily virtual std\+::vector$<$ double $>$ Multdim\+Opt\+::\+Optimize (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Функция многомерной оптимизации 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & координаты точки \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_determine_search_aef1783f347e0d6ac699a164bf7184e80}{Determine\+Search}}, and \mbox{\hyperlink{class_random_search_a37ad9ee83ab0168f759224428fb70180}{Random\+Search}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_multdim_opt_a69f4a50ed48459aa2bac0304bab28d5a}\label{class_multdim_opt_a69f4a50ed48459aa2bac0304bab28d5a} 
+\index{MultdimOpt@{MultdimOpt}!f@{f}}
+\index{f@{f}!MultdimOpt@{MultdimOpt}}
+\doxysubsubsection{\texorpdfstring{f}{f}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classfunc}{func}}\& Multdim\+Opt\+::f\hspace{0.3cm}{\ttfamily [protected]}}
+
+Функция \Hypertarget{class_multdim_opt_a0790e4a45ecf0bf5479158001baa9320}\label{class_multdim_opt_a0790e4a45ecf0bf5479158001baa9320} 
+\index{MultdimOpt@{MultdimOpt}!l@{l}}
+\index{l@{l}!MultdimOpt@{MultdimOpt}}
+\doxysubsubsection{\texorpdfstring{l}{l}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Multdim\+Opt\+::l\hspace{0.3cm}{\ttfamily [protected]}}
+
+Левая граница \Hypertarget{class_multdim_opt_a6fa83ebd5dff988d68878de217af86ac}\label{class_multdim_opt_a6fa83ebd5dff988d68878de217af86ac} 
+\index{MultdimOpt@{MultdimOpt}!r@{r}}
+\index{r@{r}!MultdimOpt@{MultdimOpt}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ Multdim\+Opt\+::r\hspace{0.3cm}{\ttfamily [protected]}}
+
+Правая граница \Hypertarget{class_multdim_opt_a00f2d98c73295540f4c313d2ee598085}\label{class_multdim_opt_a00f2d98c73295540f4c313d2ee598085} 
+\index{MultdimOpt@{MultdimOpt}!stop\_crit@{stop\_crit}}
+\index{stop\_crit@{stop\_crit}!MultdimOpt@{MultdimOpt}}
+\doxysubsubsection{\texorpdfstring{stop\_crit}{stop\_crit}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}}\& Multdim\+Opt\+::stop\+\_\+crit\hspace{0.3cm}{\ttfamily [protected]}}
+
+Критерий остановки 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Optimization.\+h\end{DoxyCompactItemize}

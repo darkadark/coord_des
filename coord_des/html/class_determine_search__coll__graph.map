@@ -1,0 +1,9 @@
+<map id="DetermineSearch" name="DetermineSearch">
+<area shape="rect" id="Node000001" title="Класс метода покоординатного спуска" alt="" coords="14,172,135,199"/>
+<area shape="rect" id="Node000002" href="$class_multdim_opt.html" title="Класс многомерной оптимизации" alt="" coords="31,96,119,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,137,77,172,72,172,72,137"/>
+<area shape="rect" id="Node000003" href="$classfunc.html" title="Класс заданных функций" alt="" coords="5,5,51,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="44,44,70,94,66,97,39,46"/>
+<area shape="rect" id="Node000004" href="$class_stop_criterion.html" title="Класс критериев остановки" alt="" coords="75,5,171,32"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="111,46,84,97,79,94,107,44"/>
+</map>

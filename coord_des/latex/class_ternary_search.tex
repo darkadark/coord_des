@@ -1,0 +1,95 @@
+\doxysection{Ternary\+Search Class Reference}
+\hypertarget{class_ternary_search}{}\label{class_ternary_search}\index{TernarySearch@{TernarySearch}}
+
+
+Класс метода остановки для одномерной оптимизации  
+
+
+
+
+{\ttfamily \#include $<$Optimization.\+h$>$}
+
+
+
+Inheritance diagram for Ternary\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{class_ternary_search__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ternary\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{class_ternary_search__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ternary_search_ad26c0052c0566451dda7f7bc107a64a0}{Ternary\+Search}} (double eps\+\_\+)
+\begin{DoxyCompactList}\small\item\em Конструктор класс метода остановки для одномерной оптимизации \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_ternary_search_a19d0957ef13cc1f480905d8bf29d7d36}{Optimize}} (double r, double l, std\+::function$<$ double(double)$>$ f) override
+\begin{DoxyCompactList}\small\item\em Функция одномерной оптимизации \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual double \mbox{\hyperlink{class_onedim_opt_a8bb320553d225ef486afbb81b6d0490d}{Optimize}} (double r, double l, std\+::function$<$ double(double)$>$ f)=0
+\begin{DoxyCompactList}\small\item\em Функция одномерной оптимизации \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс метода остановки для одномерной оптимизации 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ternary_search_ad26c0052c0566451dda7f7bc107a64a0}\label{class_ternary_search_ad26c0052c0566451dda7f7bc107a64a0} 
+\index{TernarySearch@{TernarySearch}!TernarySearch@{TernarySearch}}
+\index{TernarySearch@{TernarySearch}!TernarySearch@{TernarySearch}}
+\doxysubsubsection{\texorpdfstring{TernarySearch()}{TernarySearch()}}
+{\footnotesize\ttfamily Ternary\+Search\+::\+Ternary\+Search (\begin{DoxyParamCaption}\item[{double}]{eps\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор класс метода остановки для одномерной оптимизации 
+
+
+\begin{DoxyParams}{Parameters}
+{\em eps\+\_\+} & эпсилон для остановки \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ternary_search_a19d0957ef13cc1f480905d8bf29d7d36}\label{class_ternary_search_a19d0957ef13cc1f480905d8bf29d7d36} 
+\index{TernarySearch@{TernarySearch}!Optimize@{Optimize}}
+\index{Optimize@{Optimize}!TernarySearch@{TernarySearch}}
+\doxysubsubsection{\texorpdfstring{Optimize()}{Optimize()}}
+{\footnotesize\ttfamily double Ternary\+Search\+::\+Optimize (\begin{DoxyParamCaption}\item[{double}]{r,  }\item[{double}]{l,  }\item[{std\+::function$<$ double(double)$>$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Функция одномерной оптимизации 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & правая граница \\
+\hline
+{\em l} & левая граница \\
+\hline
+{\em f} & функция \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_onedim_opt_a8bb320553d225ef486afbb81b6d0490d}{Onedim\+Opt}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Optimization.\+h\item 
+Optimization.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\doxysection{Stop\+Criterion Class Reference}
+\hypertarget{class_stop_criterion}{}\label{class_stop_criterion}\index{StopCriterion@{StopCriterion}}
+
+
+Класс критериев остановки  
+
+
+
+
+{\ttfamily \#include $<$Stop\+Criterion.\+h$>$}
+
+
+
+Inheritance diagram for Stop\+Criterion\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_stop_criterion__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{class_stop_criterion_a56f99830632b664d26d1f2d4c9666967}{Need\+Stop}} (const std\+::vector$<$ double $>$ \&x, double y, int n)=0
+\begin{DoxyCompactList}\small\item\em Функция необходимости остановки \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс критериев остановки 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stop_criterion_a56f99830632b664d26d1f2d4c9666967}\label{class_stop_criterion_a56f99830632b664d26d1f2d4c9666967} 
+\index{StopCriterion@{StopCriterion}!NeedStop@{NeedStop}}
+\index{NeedStop@{NeedStop}!StopCriterion@{StopCriterion}}
+\doxysubsubsection{\texorpdfstring{NeedStop()}{NeedStop()}}
+{\footnotesize\ttfamily virtual bool Stop\+Criterion\+::\+Need\+Stop (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{x,  }\item[{double}]{y,  }\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Функция необходимости остановки 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & координаты точки \\
+\hline
+{\em y} & координаты точки \\
+\hline
+{\em n} & количество итераций \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_stop_criterion_by_y_eps_a00046807aff91d59d3ed8aa0602706c2}{Stop\+Criterion\+By\+YEps}}, \mbox{\hyperlink{class_stop_criterion_by_x_eps_afa43eafed1b538857f730e35d5a6f04d}{Stop\+Criterion\+By\+XEps}}, and \mbox{\hyperlink{class_stop_criterion_by_n_a1d5f167b886f3c7111e35d0e4ff7eca4}{Stop\+Criterion\+ByN}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Stop\+Criterion.\+h\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="StopCriterion" name="StopCriterion">
+<area shape="rect" id="Node000001" title="Класс критериев остановки" alt="" coords="174,5,270,32"/>
+<area shape="rect" id="Node000002" href="$class_stop_criterion_by_n.html" title="Класс критерия остановки n iterations." alt="" coords="5,80,127,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,41,95,82,92,77,180,36"/>
+<area shape="rect" id="Node000003" href="$class_stop_criterion_by_x_eps.html" title="Класс критерия остановки |x &#45; y| &lt; eps." alt="" coords="151,80,293,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,47,225,80,219,80,219,47"/>
+<area shape="rect" id="Node000004" href="$class_stop_criterion_by_y_eps.html" title="Класс критерия остановки |f(x) &#45; f(y)| &lt; eps." alt="" coords="318,80,462,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="266,36,362,77,359,82,264,41"/>
+</map>

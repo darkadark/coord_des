@@ -1,0 +1,5 @@
+<map id="OnedimOpt" name="OnedimOpt">
+<area shape="rect" id="Node000001" title="Класс одномерной оптимизации" alt="" coords="14,5,102,32"/>
+<area shape="rect" id="Node000002" href="$class_ternary_search.html" title="Класс метода остановки для одномерной оптимизации" alt="" coords="5,80,111,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,47,61,80,55,80,55,47"/>
+</map>

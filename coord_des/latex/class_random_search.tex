@@ -1,0 +1,116 @@
+\doxysection{Random\+Search Class Reference}
+\hypertarget{class_random_search}{}\label{class_random_search}\index{RandomSearch@{RandomSearch}}
+
+
+Класс метода случайного поиска  
+
+
+
+
+{\ttfamily \#include $<$Optimization.\+h$>$}
+
+
+
+Inheritance diagram for Random\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_random_search__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Random\+Search\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=204pt]{class_random_search__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_random_search_ad897949c37f0117b3c627485ddac9272}{Random\+Search}} (const \mbox{\hyperlink{classfunc}{func}} \&f\+\_\+, const std\+::vector$<$ double $>$ \&r\+\_\+, const std\+::vector$<$ double $>$ \&l\+\_\+, double p\+\_\+, double delta\+\_\+, \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&stop\+\_\+crit\+\_\+)
+\begin{DoxyCompactList}\small\item\em Конструктор класса метода случайного поиска \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_random_search_a37ad9ee83ab0168f759224428fb70180}{Optimize}} (const std\+::vector$<$ double $>$ \&x) override
+\begin{DoxyCompactList}\small\item\em Функция многомерной оптимизации методом случайного поиска \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_multdim_opt}{Multdim\+Opt}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_multdim_opt_afe3ec62a3a109a3436180c1aa09a8218}{Multdim\+Opt}} (const \mbox{\hyperlink{classfunc}{func}} \&f\+\_\+, const std\+::vector$<$ double $>$ \&r\+\_\+, const std\+::vector$<$ double $>$ \&l\+\_\+, \mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&stop\+\_\+crit\+\_\+)
+\begin{DoxyCompactList}\small\item\em Конструктор класса многомерной оптимизации \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ double $>$ \mbox{\hyperlink{class_multdim_opt_a6fff0c18101fb90443b7f599d4f28d9b}{Optimize}} (const std\+::vector$<$ double $>$ \&x)=0
+\begin{DoxyCompactList}\small\item\em Функция многомерной оптимизации \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_multdim_opt}{Multdim\+Opt}}}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{classfunc}{func}} \& \mbox{\hyperlink{class_multdim_opt_a69f4a50ed48459aa2bac0304bab28d5a}{f}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_multdim_opt_a6fa83ebd5dff988d68878de217af86ac}{r}}
+\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{class_multdim_opt_a0790e4a45ecf0bf5479158001baa9320}{l}}
+\item 
+\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \& \mbox{\hyperlink{class_multdim_opt_a00f2d98c73295540f4c313d2ee598085}{stop\+\_\+crit}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс метода случайного поиска 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_random_search_ad897949c37f0117b3c627485ddac9272}\label{class_random_search_ad897949c37f0117b3c627485ddac9272} 
+\index{RandomSearch@{RandomSearch}!RandomSearch@{RandomSearch}}
+\index{RandomSearch@{RandomSearch}!RandomSearch@{RandomSearch}}
+\doxysubsubsection{\texorpdfstring{RandomSearch()}{RandomSearch()}}
+{\footnotesize\ttfamily Random\+Search\+::\+Random\+Search (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classfunc}{func}} \&}]{f\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{r\+\_\+,  }\item[{const std\+::vector$<$ double $>$ \&}]{l\+\_\+,  }\item[{double}]{p\+\_\+,  }\item[{double}]{delta\+\_\+,  }\item[{\mbox{\hyperlink{class_stop_criterion}{Stop\+Criterion}} \&}]{stop\+\_\+crit\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Конструктор класса метода случайного поиска 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f\+\_\+} & заданная функция \\
+\hline
+{\em r\+\_\+} & правая граница \\
+\hline
+{\em l\+\_\+} & левая граница \\
+\hline
+{\em p\+\_\+} & вероятность p \\
+\hline
+{\em delta\+\_\+} & окрестность точки \\
+\hline
+{\em stop\+\_\+crit\+\_\+} & критерий остановки \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_random_search_a37ad9ee83ab0168f759224428fb70180}\label{class_random_search_a37ad9ee83ab0168f759224428fb70180} 
+\index{RandomSearch@{RandomSearch}!Optimize@{Optimize}}
+\index{Optimize@{Optimize}!RandomSearch@{RandomSearch}}
+\doxysubsubsection{\texorpdfstring{Optimize()}{Optimize()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Random\+Search\+::\+Optimize (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Функция многомерной оптимизации методом случайного поиска 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & координаты точки \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_multdim_opt_a6fff0c18101fb90443b7f599d4f28d9b}{Multdim\+Opt}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Optimization.\+h\item 
+Optimization.\+cpp\end{DoxyCompactItemize}

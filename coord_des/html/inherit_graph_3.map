@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_stop_criterion.html" title="Класс критериев остановки" alt="" coords="5,56,102,83"/>
+<area shape="rect" id="Node000001" href="$class_stop_criterion_by_n.html" title="Класс критерия остановки n iterations." alt="" coords="161,5,283,32"/>
+<area shape="poly" id="edge7_Node000000_Node000001" title=" " alt="" coords="113,49,174,30,176,35,115,54"/>
+<area shape="rect" id="Node000002" href="$class_stop_criterion_by_x_eps.html" title="Класс критерия остановки |x &#45; y| &lt; eps." alt="" coords="151,56,293,83"/>
+<area shape="poly" id="edge8_Node000000_Node000002" title=" " alt="" coords="117,67,150,67,150,72,117,72"/>
+<area shape="rect" id="Node000003" href="$class_stop_criterion_by_y_eps.html" title="Класс критерия остановки |f(x) &#45; f(y)| &lt; eps." alt="" coords="150,107,294,133"/>
+<area shape="poly" id="edge9_Node000000_Node000003" title=" " alt="" coords="115,85,176,104,174,109,113,90"/>
+</map>
