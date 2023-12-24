@@ -151,11 +151,13 @@ int main()
 
     res = multdim_opt->Optimize(x_0);
 
-    std::cout << "\nResult:" << std::endl; 
+    std::cout << "\nResult x:" << std::endl; 
     for (int i = 0; i < res.size(); ++i) {
         std::cout << res[i] << " ";
     }
-    
+    std::cout << "\nResult f:" << std::endl;
+    std::cout << f->operator()(res);
+
     delete multdim_opt;
     delete stop_crit;
     return 0;
